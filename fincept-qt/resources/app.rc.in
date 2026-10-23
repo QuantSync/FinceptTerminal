@@ -27,7 +27,7 @@ BEGIN
             VALUE "FileVersion",      "@CMAKE_PROJECT_VERSION@"
             VALUE "InternalName",     "NumeryTerminal"
             VALUE "LegalCopyright",   "Copyright (C) 2025 Numery Corporation. AGPL-3.0-or-later."
-            VALUE "OriginalFilename", "FinceptTerminal.exe"
+            VALUE "OriginalFilename", "NumeryTerminal.exe"
             VALUE "ProductName",      "Numery Terminal"
             VALUE "ProductVersion",   "@CMAKE_PROJECT_VERSION@"
         END

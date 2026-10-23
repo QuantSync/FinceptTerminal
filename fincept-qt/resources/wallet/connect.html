@@ -258,9 +258,9 @@
           body: JSON.stringify({ level: level, msg: String(msg) })
         }).catch(function() {});
       } catch (_) {}
-      if (level === "error") console.error("[FinceptWallet]", msg);
-      else if (level === "warn") console.warn("[FinceptWallet]", msg);
-      else console.log("[FinceptWallet]", msg);
+      if (level === "error") console.error("[NumeryWallet]", msg);
+      else if (level === "warn") console.warn("[NumeryWallet]", msg);
+      else console.log("[NumeryWallet]", msg);
     }
     window.addEventListener("error", function(e) {
       logToTerminal("error", "uncaught: " + (e && e.message));

@@ -767,7 +767,7 @@ int main(int argc, char* argv[]) {
                 log.set_tag_level(tag, lvl_map.value(level));
         }
     }
-    LOG_INFO("App", "Fincept Terminal v" FINCEPT_VERSION_STRING " starting...");
+    LOG_INFO("App", "Numery Terminal v" FINCEPT_VERSION_STRING " starting...");
     LOG_INFO("App", QString("TLS backend: %1 (available: %2)")
                         .arg(QSslSocket::activeBackend(), QSslSocket::availableBackends().join(", ")));
 
@@ -1154,7 +1154,7 @@ int main(int argc, char* argv[]) {
         // (e.g. user somehow triggers it twice before the window is hidden).
         auto* setup_screen = new fincept::screens::SetupScreen;
         QPointer<fincept::screens::SetupScreen> screen_guard(setup_screen);
-        setup_screen->setWindowTitle("Fincept Terminal — First-Time Setup");
+        setup_screen->setWindowTitle("Numery Terminal — First-Time Setup");
         setup_screen->resize(800, 600);
         setup_screen->show();
 

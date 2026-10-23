@@ -262,7 +262,7 @@ AboutScreen::AboutScreen(QWidget* parent) : QWidget(parent) {
             pvl->addWidget(body);
 
             // Footer link
-            auto* foot = new QLabel("fincept.in/enterprise");
+            auto* foot = new QLabel("numery.in/enterprise");
             foot->setStyleSheet(QString("color: %1; font-size: 11px; background: transparent; "
                                         "padding: 6px 14px; border-top: 1px solid %2; "
                                         "font-family: 'Consolas','Courier New',monospace;")

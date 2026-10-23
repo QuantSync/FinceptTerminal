@@ -3,6 +3,7 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QStackedWidget>
+#include <QTimer>
 #include <QWidget>
 
 namespace fincept::screens {
@@ -59,6 +60,12 @@ class LoginScreen : public QWidget {
     QPushButton* cancel_btn_ = nullptr;
 
     QStackedWidget* pages_ = nullptr;
+
+    // ── Designer credit typing animation ─────────────────────────────────────
+    QLabel*  designer_lbl_  = nullptr;
+    QTimer*  typing_timer_  = nullptr;
+    int      typing_idx_    = 0;
+    void     start_typing_animation();
 
     void build_login_page();
     void build_mfa_page();

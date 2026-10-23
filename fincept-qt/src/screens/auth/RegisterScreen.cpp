@@ -118,6 +118,19 @@ RegisterScreen::RegisterScreen(QWidget* parent) : QWidget(parent) {
 
     overlay->addWidget(pages_, 0, Qt::AlignCenter);
 
+    // ── Designer credit — placed BELOW the card, full-width, always visible ──
+    designer_lbl_ = new QLabel(this);
+    designer_lbl_->setAlignment(Qt::AlignCenter);
+    designer_lbl_->setStyleSheet(
+        "color: #ffffff; font-size: 13px; font-weight: 700;"
+        "background: transparent;"
+        "font-family: 'Consolas','Courier New',monospace;"
+        "letter-spacing: 1.2px;");
+    designer_lbl_->setContentsMargins(0, 10, 0, 18);
+    root->addWidget(designer_lbl_);
+
+    QTimer::singleShot(400, this, &RegisterScreen::start_typing_animation);
+
     retranslateUi();
 
     auto& auth = auth::AuthManager::instance();
@@ -371,15 +384,8 @@ void RegisterScreen::build_form_page() {
     lrl->addWidget(signin_btn_);
     vl->addWidget(login_row);
 
-    // ── Designer credit ──────────────────────────────────────────────────────
-    auto* designer_lbl = new QLabel(QStringLiteral("Designed By Anubhav Singh Rajput"));
-    designer_lbl->setAlignment(Qt::AlignCenter);
-    designer_lbl->setStyleSheet(
-        QString("color: %1; font-size: 11px; background: transparent;"
-                "font-family: 'Consolas','Courier New',monospace;"
-                "letter-spacing: 0.3px; margin-top: 4px;")
-            .arg(ui::colors::TEXT_DIM()));
-    vl->addWidget(designer_lbl);
+    // (Designer credit is rendered outside the card in the root layout
+    //  so it is always fully visible — see constructor.)
 
     // ── Input limits ─────────────────────────────────────────────────────────
     // Client-side caps mirroring the register endpoint's constraints, so an
@@ -728,6 +734,35 @@ void RegisterScreen::reset_resend_cooldown() {
         resend_btn_->setEnabled(true);
         resend_btn_->setText(tr("DIDN'T RECEIVE? RESEND"));
     }
+}
+
+// ── Typing Animation ─────────────────────────────────────────────────────────
+
+void RegisterScreen::start_typing_animation() {
+    if (!designer_lbl_)
+        return;
+
+    static const QString full_text = QStringLiteral("  Designed By Anubhav Singh Rajput  ");
+    typing_idx_ = 0;
+    designer_lbl_->setText(QStringLiteral("|"));
+
+    if (!typing_timer_) {
+        typing_timer_ = new QTimer(this);
+        typing_timer_->setInterval(55);
+        connect(typing_timer_, &QTimer::timeout, this, [this]() {
+            if (!designer_lbl_)
+                return;
+            if (typing_idx_ <= full_text.size()) {
+                designer_lbl_->setText(full_text.left(typing_idx_) + QStringLiteral("\u2588"));
+                ++typing_idx_;
+            } else {
+                typing_timer_->stop();
+                designer_lbl_->setText(full_text);
+                QTimer::singleShot(3000, this, &RegisterScreen::start_typing_animation);
+            }
+        });
+    }
+    typing_timer_->start();
 }
 
 } // namespace fincept::screens

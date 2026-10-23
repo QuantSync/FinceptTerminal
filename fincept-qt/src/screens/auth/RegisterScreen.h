@@ -78,6 +78,12 @@ class RegisterScreen : public QWidget {
     void start_resend_cooldown();
     void reset_resend_cooldown();
 
+    // ── Designer credit typing animation ─────────────────────────────────────
+    QLabel*  designer_lbl_ = nullptr;
+    QTimer*  typing_timer_ = nullptr;
+    int      typing_idx_   = 0;
+    void     start_typing_animation();
+
     void build_form_page();
     void build_otp_page();
     void update_password_strength();

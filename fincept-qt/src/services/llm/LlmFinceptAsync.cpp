@@ -801,7 +801,7 @@ LlmResponse LlmService::fincept_async_request(const QString& user_message,
 
     // Nothing usable — surface the failure instead of leaking tool markup.
     LlmResponse err;
-    err.error = final_turn.error.isEmpty() ? QStringLiteral("Fincept LLM stopped without producing an answer.")
+    err.error = final_turn.error.isEmpty() ? QStringLiteral("Numery LLM stopped without producing an answer.")
                                            : final_turn.error;
     return err;
 }

@@ -212,7 +212,7 @@ void UpdateService::check_for_updates(bool silent) {
     QNetworkRequest req{QUrl(manifest_url_)};
     req.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::NoLessSafeRedirectPolicy);
     req.setHeader(QNetworkRequest::UserAgentHeader,
-                  QString("FinceptTerminal/%1 (%2)").arg(local_version, platform_key));
+                  QString("NumeryTerminal/%1 (%2)").arg(local_version, platform_key));
     QNetworkReply* reply = net_.get(req);
     connect(reply, &QNetworkReply::finished, this, &UpdateService::on_manifest_reply_finished);
 }
@@ -289,7 +289,7 @@ void UpdateService::on_manifest_reply_finished() {
     QNetworkRequest sig_req{QUrl(sig_url)};
     sig_req.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::NoLessSafeRedirectPolicy);
     sig_req.setHeader(QNetworkRequest::UserAgentHeader,
-                      QString("FinceptTerminal/%1").arg(QApplication::applicationVersion()));
+                      QString("NumeryTerminal/%1").arg(QApplication::applicationVersion()));
     QNetworkReply* sig_reply = net_.get(sig_req);
     connect(sig_reply, &QNetworkReply::finished, this, &UpdateService::on_signature_reply_finished);
 }
@@ -374,7 +374,7 @@ void UpdateService::process_verified_manifest(const QByteArray& body) {
         LOG_INFO("UpdateService",
                  QString("Already up to date — local=%1, remote=%2").arg(local_version, remote_version));
         if (!silent_) {
-            QMessageBox::information(dialog_parent(), QStringLiteral("Fincept Terminal"),
+            QMessageBox::information(dialog_parent(), QStringLiteral("Numery Terminal"),
                                      QStringLiteral("You're running the latest version (%1).").arg(local_version));
         }
         finish_check(false);
@@ -386,7 +386,7 @@ void UpdateService::process_verified_manifest(const QByteArray& body) {
 
     // Prompt the user. Include changelog if present. Always offer a "view release
     // notes" escape hatch via open-url so users can read more before installing.
-    QString prompt = QStringLiteral("A new version of Fincept Terminal is available.\n\n"
+    QString prompt = QStringLiteral("A new version of Numery Terminal is available.\n\n"
                                     "Current version: %1\nLatest version:  %2\n\n")
                          .arg(local_version, remote_version);
     if (!changelog.isEmpty()) {
@@ -431,7 +431,7 @@ void UpdateService::start_download(const QString& url, const QString& expected_s
     const QString file_name = QFileInfo(QUrl(url).path()).fileName();
     const QString dir = QStandardPaths::writableLocation(QStandardPaths::TempLocation);
     pending_local_path_ =
-        QDir(dir).filePath(file_name.isEmpty() ? QStringLiteral("FinceptTerminal-update.tmp") : file_name);
+        QDir(dir).filePath(file_name.isEmpty() ? QStringLiteral("NumeryTerminal-update.tmp") : file_name);
 
     // Drop any leftover from a previous run — otherwise a partial file could
     // survive and poison sha256 verification.
@@ -444,7 +444,7 @@ void UpdateService::start_download(const QString& url, const QString& expected_s
     QNetworkRequest req{QUrl(url)};
     req.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::NoLessSafeRedirectPolicy);
     req.setHeader(QNetworkRequest::UserAgentHeader,
-                  QString("FinceptTerminal/%1").arg(QApplication::applicationVersion()));
+                  QString("NumeryTerminal/%1").arg(QApplication::applicationVersion()));
     QNetworkReply* reply = net_.get(req);
     connect(reply, &QNetworkReply::finished, this, &UpdateService::on_download_reply_finished);
     connect(reply, &QNetworkReply::downloadProgress, this, &UpdateService::on_download_progress);
@@ -596,7 +596,7 @@ void UpdateService::finish_check(bool update_found) {
 }
 
 void UpdateService::show_error(const QString& text) {
-    QMessageBox::warning(dialog_parent(), QStringLiteral("Fincept Terminal"), text);
+    QMessageBox::warning(dialog_parent(), QStringLiteral("Numery Terminal"), text);
 }
 
 } // namespace fincept::services

@@ -1,4 +1,4 @@
-﻿#include "services/notifications/providers/OpsgenieProvider.h"
+#include "services/notifications/providers/OpsgenieProvider.h"
 
 #include "network/http/HttpClient.h"
 
@@ -41,7 +41,7 @@ void OpsgenieProvider::send(const NotificationRequest& req, std::function<void(b
     body["message"] = req.title;
     body["description"] = req.message;
     body["priority"] = priority;
-    body["source"] = "Fincept Terminal";
+    body["source"] = "Numery Terminal";
 
     HttpClient::instance().post(url, body, [cb](Result<QJsonDocument> res) {
         if (res.is_err()) {

@@ -77,8 +77,8 @@ ToolBar::ToolBar(QWidget* parent) : QWidget(parent) {
     };
 
     sep();
-    // FINCEPT / TERMINAL are brand marks — set raw, never translated.
-    fincept_label_ = mk(QStringLiteral("FINCEPT "));
+    // NUMERY / TERMINAL are brand marks — set raw, never translated.
+    fincept_label_ = mk(QStringLiteral("NUMERY "));
     hl->addWidget(fincept_label_);
     branding_label_ = mk(QStringLiteral("TERMINAL"));
     hl->addWidget(branding_label_);
@@ -183,7 +183,7 @@ void ToolBar::retranslateUi() {
         // fromUtf8 is required — QStringLiteral would widen each UTF-8 byte
         // into its own UTF-16 unit and render as mojibake.
         upgrade_btn_->setText(QString::fromUtf8("\xe2\x96\xb4 ") + tr("UPGRADE"));
-        upgrade_btn_->setToolTip(tr("Upgrade to Fincept Terminal Enterprise — the private edition"));
+        upgrade_btn_->setToolTip(tr("Upgrade to Numery Terminal Enterprise — the private edition"));
     }
     if (chat_mode_btn_) {
         // Keep the ⬡ glyph (U+2B21) as a visual icon; only the label after it
@@ -525,7 +525,7 @@ QMenu* ToolBar::build_view_menu() {
 QMenu* ToolBar::build_help_menu() {
     auto* m = new QMenu(tr("Help"), this);
     m->setStyleSheet(popup_ss());
-    m->addAction(tr("About Fincept"), this, [this]() { emit navigate_to("about"); });
+    m->addAction(tr("About Numery"), this, [this]() { emit navigate_to("about"); });
     m->addAction(tr("Help Center"), this, [this]() { emit navigate_to("help"); });
     m->addSeparator();
     m->addAction(tr("Contact Us"), this, [this]() { emit navigate_to("contact"); });

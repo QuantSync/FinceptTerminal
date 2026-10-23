@@ -627,10 +627,10 @@ void AiChatScreen::update_stats() {
         const bool is_fincept = (provider_raw.toLower() == "fincept");
 
         // Display names
-        const QString prov_display = is_fincept ? tr("Fincept LLM") : provider_raw.toUpper();
+        const QString prov_display = is_fincept ? tr("Numery LLM") : provider_raw.toUpper();
         const QString model_raw = llm.active_model();
         // For fincept, don't expose internal model name
-        const QString model_display = is_fincept ? tr("Fincept LLM") : model_raw;
+        const QString model_display = is_fincept ? tr("Numery LLM") : model_raw;
         QString model_short = model_display;
         if (model_short.length() > 24)
             model_short = model_short.left(22) + "..";
@@ -639,14 +639,14 @@ void AiChatScreen::update_stats() {
         provider_lbl_->setText(prov_display);
         provider_lbl_->setStyleSheet(
             QString("color:%1;font-size:%2px;font-weight:600;").arg(col::AMBER()).arg(fnt::SMALL));
-        model_lbl_->setText(is_fincept ? tr("Managed by Fincept") : model_short);
-        model_lbl_->setToolTip(is_fincept ? tr("Fincept LLM — managed AI service") : model_raw);
+        model_lbl_->setText(is_fincept ? tr("Managed by Numery") : model_short);
+        model_lbl_->setToolTip(is_fincept ? tr("Numery LLM — managed AI service") : model_raw);
         model_lbl_->setStyleSheet(QString("color:%1;font-size:%2px;").arg(col::TEXT_SECONDARY()).arg(fnt::TINY));
 
         // Header model pill — show "Provider / Model" for clarity
         if (is_fincept) {
-            hdr_model_lbl_->setText(tr("Fincept LLM"));
-            hdr_model_lbl_->setToolTip(tr("Fincept managed AI service\n\nChange in Settings > LLM Configuration"));
+            hdr_model_lbl_->setText(tr("Numery LLM"));
+            hdr_model_lbl_->setToolTip(tr("Numery managed AI service\n\nChange in Settings > LLM Configuration"));
         } else {
             hdr_model_lbl_->setText(provider_raw.left(1).toUpper() + provider_raw.mid(1) + " / " + model_short);
             hdr_model_lbl_->setToolTip(

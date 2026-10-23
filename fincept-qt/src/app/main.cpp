@@ -1,4 +1,4 @@
-﻿#include "algo_engine/AlgoEngineProducer.h"
+#include "algo_engine/AlgoEngineProducer.h"
 #include "algo_engine/ScanMonitor.h"
 #include "algo_engine/UniverseScanSelftest.h"
 #include "algo_engine/fno/FnoAlgoSelftest.h"
@@ -287,11 +287,11 @@ int main(int argc, char* argv[]) {
     // launch. See InstanceLock.h for the fuller story (issues #234, #252).
     //
     // The instance key is scoped to the active profile name, so
-    // "FinceptTerminal --profile work" and "FinceptTerminal --profile personal"
+    // "NumeryTerminal --profile work" and "NumeryTerminal --profile personal"
     // run as two independent primaries.
     QApplication app(argc, argv);
-    app.setApplicationName("FinceptTerminal");
-    app.setOrganizationName("Fincept");
+    app.setApplicationName("NumeryTerminal");
+    app.setOrganizationName("Numery");
 #ifndef FINCEPT_VERSION_STRING
 #    define FINCEPT_VERSION_STRING "0.0.0-dev"
 #endif
@@ -316,7 +316,7 @@ int main(int argc, char* argv[]) {
     }
 
     // ── Single-instance lock + new-window IPC ────────────────────────────────
-    const QString profile_key = QString("FinceptTerminal-%1").arg(fincept::ProfileManager::instance().active());
+    const QString profile_key = QString("NumeryTerminal-%1").arg(fincept::ProfileManager::instance().active());
     fincept::InstanceLock instance_lock;
     const auto lock_status = instance_lock.acquire(profile_key, QCoreApplication::arguments());
 
@@ -849,7 +849,7 @@ int main(int argc, char* argv[]) {
         // A newer-than-build schema never reaches here: MigrationRunner::run()
         // warns and returns ok() for that case, so the DB opens normally.
         if (fincept::MigrationRunner::is_fatal_error(db_err)) {
-            QMessageBox::critical(nullptr, QObject::tr("Fincept Terminal — database error"),
+            QMessageBox::critical(nullptr, QObject::tr("Numery Terminal — database error"),
                                   QString::fromStdString(db_err));
             // Returning from main() never reaches exec(), so aboutToQuit never
             // fires and the shell's clean-shutdown marker would never be

@@ -298,7 +298,7 @@ void TierPanel::render_state(fincept::wallet::TierStatus::Tier current, const QS
         footer_->setText(tr("Next: lock %1 to reach the next tier.").arg(next_threshold_ui_str));
         footer_->show();
     } else if (current == Tier::Gold) {
-        footer_->setText(tr("All Fincept Terminal features unlocked."));
+        footer_->setText(tr("All Numery Terminal features unlocked."));
         footer_->show();
     } else {
         footer_->hide();

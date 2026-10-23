@@ -90,7 +90,7 @@ void AiChatScreen::build_sidebar() {
     icon->setStyleSheet(QString("color:%1;font-size:22px;").arg(col::TEXT_PRIMARY()));
     hhl->addWidget(icon);
 
-    auto* title = new QLabel("Fincept AI");
+    auto* title = new QLabel("Numery AI");
     title->setStyleSheet(QString("color:%1;font-size:%2px;font-weight:700;").arg(col::TEXT_PRIMARY()).arg(fnt::BODY));
     hhl->addWidget(title, 1);
 
@@ -463,7 +463,7 @@ QWidget* AiChatScreen::build_input_area() {
     hl->setSpacing(10);
 
     input_box_ = new QPlainTextEdit;
-    input_box_->setPlaceholderText(tr("Message Fincept AI..."));
+    input_box_->setPlaceholderText(tr("Message Numery AI..."));
     input_box_->setFixedHeight(44);
     input_box_->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     input_box_->setStyleSheet(QString("QPlainTextEdit{background:%1;color:%2;border:1px solid %3;"
@@ -473,7 +473,7 @@ QWidget* AiChatScreen::build_input_area() {
                                   .arg(fnt::BODY)
                                   .arg(col::AMBER()));
     input_box_->installEventFilter(this);
-    input_box_->setAccessibleName(tr("Message Fincept AI"));
+    input_box_->setAccessibleName(tr("Message Numery AI"));
     input_box_->setAccessibleDescription(
         tr("Enter sends, Shift+Enter inserts a new line, Ctrl+N or Ctrl+K starts a new session."));
     connect(input_box_, &QPlainTextEdit::textChanged, this, [this]() {

@@ -22,8 +22,8 @@ NavigationBar::NavigationBar(QWidget* parent) : QWidget(parent) {
         return l;
     };
 
-    // FINCEPT / TERMINAL are brand marks — set raw, never translated.
-    hl->addWidget(mk("FINCEPT", "navBrand"));
+    // NUMERY / TERMINAL are brand marks — set raw, never translated.
+    hl->addWidget(mk("NUMERY", "navBrand"));
     hl->addWidget(mk("TERMINAL", "navTitle"));
     hl->addWidget(mk("   ", "navSpacer"));
     hl->addWidget(mk("\xe2\x97\x8f", "navLiveDot")); // U+25CF — pure icon, no translation

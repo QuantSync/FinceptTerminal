@@ -101,12 +101,12 @@ QWidget* TrademarksScreen::build_page() {
     pvl->setContentsMargins(20, 16, 20, 16);
     pvl->setSpacing(6);
 
-    pvl->addWidget(heading("1", tr("FINCEPT TRADEMARKS")));
+    pvl->addWidget(heading("1", tr("NUMERY TRADEMARKS")));
     // Trademark marks themselves are brand strings — shown verbatim, not translated.
-    pvl->addWidget(bullet("Fincept (TM)"));
-    pvl->addWidget(bullet("Fincept Terminal (TM)"));
-    pvl->addWidget(bullet("Fincept Corporation (TM)"));
-    pvl->addWidget(bullet(tr("Fincept Logo and associated visual identities")));
+    pvl->addWidget(bullet("Numery (TM)"));
+    pvl->addWidget(bullet("Numery Terminal (TM)"));
+    pvl->addWidget(bullet("Numery Corporation (TM)"));
+    pvl->addWidget(bullet(tr("Numery Logo and associated visual identities")));
 
     pvl->addWidget(heading("2", tr("THIRD-PARTY TRADEMARKS")));
     pvl->addWidget(body(tr("The following are trademarks of their respective owners:")));
@@ -119,21 +119,21 @@ QWidget* TrademarksScreen::build_page() {
 
     pvl->addWidget(heading("3", tr("TRADEMARK GUIDELINES")));
     pvl->addWidget(body(tr("Permitted Uses:")));
-    pvl->addWidget(bullet(tr("Referring to Fincept products in editorial or descriptive contexts")));
-    pvl->addWidget(bullet(tr("Linking to official Fincept resources")));
+    pvl->addWidget(bullet(tr("Referring to Numery products in editorial or descriptive contexts")));
+    pvl->addWidget(bullet(tr("Linking to official Numery resources")));
     pvl->addWidget(bullet(tr("Academic or research references")));
 
     pvl->addSpacing(4);
     pvl->addWidget(body(tr("Prohibited Uses:")));
-    pvl->addWidget(bullet(tr("Using Fincept marks to imply endorsement or affiliation")));
-    pvl->addWidget(bullet(tr("Modifying or altering any Fincept trademark")));
-    pvl->addWidget(bullet(tr("Using Fincept marks in domain names or product names")));
+    pvl->addWidget(bullet(tr("Using Numery marks to imply endorsement or affiliation")));
+    pvl->addWidget(bullet(tr("Modifying or altering any Numery trademark")));
+    pvl->addWidget(bullet(tr("Using Numery marks in domain names or product names")));
     pvl->addWidget(bullet(tr("Creating confusingly similar marks")));
 
     pvl->addWidget(heading("4", tr("COPYRIGHT NOTICE")));
-    pvl->addWidget(body(tr("Copyright 2024-2026 Fincept Corporation. All rights reserved.")));
+    pvl->addWidget(body(tr("Copyright 2024-2026 Numery Corporation. All rights reserved.")));
     pvl->addWidget(body(tr("This software is licensed under AGPL-3.0-or-later, and under no other licence. "
-                           "Fincept Terminal Enterprise is a separate closed-source product and is not "
+                           "Numery Terminal Enterprise is a separate closed-source product and is not "
                            "covered by this licence.")));
 
     pvl->addWidget(heading("5", tr("DATA PROVIDER ACKNOWLEDGMENTS")));
@@ -149,7 +149,7 @@ QWidget* TrademarksScreen::build_page() {
                              "Database License (ODbL)")));
 
     pvl->addWidget(heading("6", tr("THIRD-PARTY SOFTWARE")));
-    pvl->addWidget(body(tr("Fincept Terminal is built on the following open source components, "
+    pvl->addWidget(body(tr("Numery Terminal is built on the following open source components, "
                            "used under their respective licenses:")));
     // Component/license names are proper nouns — shown verbatim.
     pvl->addWidget(bullet("Qt 6 — The Qt Company (LGPL-3.0)"));
@@ -162,7 +162,7 @@ QWidget* TrademarksScreen::build_page() {
     pvl->addWidget(body(tr("To report trademark infringement, contact: support@fincept.in")));
 
     pvl->addWidget(heading("8", tr("LEGAL DEPARTMENT")));
-    pvl->addWidget(body(tr("Fincept Corporation — Legal Department")));
+    pvl->addWidget(body(tr("Numery Corporation — Legal Department")));
     pvl->addWidget(body(tr("Email: support@fincept.in")));
 
     vl->addWidget(panel);

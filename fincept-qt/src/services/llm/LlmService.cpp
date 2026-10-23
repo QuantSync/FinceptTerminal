@@ -418,7 +418,7 @@ QMap<QString, QString> LlmService::get_headers() const {
         if (p == "openrouter") {
             // Attribution for the openrouter.ai/rankings leaderboard.
             h["HTTP-Referer"] = "https://fincept.in";
-            h["X-Title"] = "Fincept Terminal";
+            h["X-Title"] = "Numery Terminal";
         }
     }
     return h;
@@ -712,7 +712,7 @@ LlmResponse LlmService::do_request(const QString& user_message, const std::vecto
             resp.content = extract_openai_message_text(choices[0].toObject()["message"].toObject());
         // success=true with empty content is a soft error.
         if (resp.content.isEmpty()) {
-            resp.error = "Fincept LLM returned an empty response. Please try again.";
+            resp.error = "Numery LLM returned an empty response. Please try again.";
             LOG_WARN(kLlmSvcTag, "Fincept /research/chat returned empty choices or content");
             return resp;
         }

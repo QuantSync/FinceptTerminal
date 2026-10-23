@@ -239,7 +239,7 @@ void AiChatScreen::retranslateUi() {
         hdr_model_lbl_->setToolTip(tr("Active model — change in Settings > LLM Configuration"));
     // Input area
     if (input_box_)
-        input_box_->setPlaceholderText(tr("Message Fincept AI..."));
+        input_box_->setPlaceholderText(tr("Message Numery AI..."));
     if (attach_btn_)
         attach_btn_->setToolTip(tr("Attach a file to this message"));
     // Typing label — only refresh while visible (timer will overwrite shortly anyway)

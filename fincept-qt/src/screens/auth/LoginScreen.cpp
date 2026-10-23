@@ -241,7 +241,7 @@ void LoginScreen::build_login_page() {
     hl->addStretch();
 
     // Brand mark — not translated.
-    auto* brand = new QLabel(QStringLiteral("FINCEPT"));
+    auto* brand = new QLabel(QStringLiteral("NUMERY"));
     brand->setStyleSheet(QString("color: %1; font-size: 12px; font-weight: 700;"
                                  "background: transparent; letter-spacing: 0.5px;"
                                  "font-family: 'Consolas','Courier New',monospace;")
@@ -381,7 +381,7 @@ void LoginScreen::build_login_page() {
     // the show/hide button sits inside a nested row widget, which otherwise
     // puts it before the password field in the focus chain.
     email_input_->setAccessibleName(tr("Email address"));
-    email_input_->setAccessibleDescription(tr("The email address of your Fincept account"));
+    email_input_->setAccessibleDescription(tr("The email address of your Numery account"));
     password_input_->setAccessibleName(tr("Password"));
     show_pw_btn_->setAccessibleName(tr("Show or hide password"));
     login_btn_->setAccessibleName(tr("Sign in"));

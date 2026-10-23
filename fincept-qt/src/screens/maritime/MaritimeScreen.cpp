@@ -204,9 +204,9 @@ void MaritimeScreen::changeEvent(QEvent* event) {
 void MaritimeScreen::retranslateUi() {
     // Top bar
     if (brand_label_)
-        brand_label_->setText(tr("FINCEPT MARITIME INTELLIGENCE"));
+        brand_label_->setText(tr("NUMERY MARITIME INTELLIGENCE"));
     if (classified_label_)
-        classified_label_->setText(tr("VESSEL TRACKING // FINCEPT MARINE API"));
+        classified_label_->setText(tr("VESSEL TRACKING // NUMERY MARINE API"));
     // credits_label_ / vessel_count_label_ carry live counts and refresh on the
     // next data update; only their idle defaults are re-applied here.
     if (credits_label_ && credits_label_->text() == QStringLiteral("CREDITS: —"))

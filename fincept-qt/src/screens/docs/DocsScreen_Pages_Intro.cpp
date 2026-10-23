@@ -36,7 +36,7 @@ QWidget* DocsScreen::page_welcome() {
     vl->setContentsMargins(20, 16, 20, 20);
     vl->setSpacing(12);
 
-    vl->addWidget(make_heading(tr("FINCEPT TERMINAL  —  DOCUMENTATION")));
+    vl->addWidget(make_heading(tr("NUMERY TERMINAL  —  DOCUMENTATION")));
     // Version comes from the running application — the hardcoded "v4.0.0" was
     // already stale against the shipped 4.0.1.
     vl->addWidget(make_muted_label(
@@ -48,13 +48,13 @@ QWidget* DocsScreen::page_welcome() {
     vl->addWidget(sep);
 
     vl->addWidget(
-        make_section_panel("■", tr("WHAT IS FINCEPT TERMINAL?"),
-                           tr("Fincept Terminal is a professional-grade desktop financial intelligence platform "
+        make_section_panel("■", tr("WHAT IS NUMERY TERMINAL?"),
+                           tr("Numery Terminal is a professional-grade desktop financial intelligence platform "
                               "built in native C++ with Qt6. It provides institutional-quality market data, "
                               "trading capabilities, quantitative research tools, and AI-powered analytics — "
                               "all in a single unified terminal interface.\n\n"
                               "With 50+ integrated screens, real-time WebSocket feeds, embedded Python analytics, "
-                              "and 16 broker integrations, Fincept Terminal bridges the gap between "
+                              "and 16 broker integrations, Numery Terminal bridges the gap between "
                               "retail and institutional tooling."),
                            ui::colors::AMBER));
 
@@ -110,7 +110,7 @@ QWidget* DocsScreen::page_getting_started() {
     vl->setSpacing(12);
 
     vl->addWidget(make_heading(tr("GETTING STARTED")));
-    vl->addWidget(make_muted_label(tr("Your first steps with Fincept Terminal")));
+    vl->addWidget(make_muted_label(tr("Your first steps with Numery Terminal")));
 
     auto* sep = new QFrame;
     sep->setFrameShape(QFrame::HLine);
@@ -118,7 +118,7 @@ QWidget* DocsScreen::page_getting_started() {
     vl->addWidget(sep);
 
     vl->addWidget(make_section_panel("1", tr("LAUNCH & LOGIN"),
-                                     tr("When you first launch Fincept Terminal, you'll see the login screen. "
+                                     tr("When you first launch Numery Terminal, you'll see the login screen. "
                                         "You can either:\n\n"
                                         "■  Register a new account with email and password\n"
                                         "■  Continue as Guest (limited features)\n"
@@ -144,7 +144,7 @@ QWidget* DocsScreen::page_getting_started() {
                                      ui::colors::AMBER));
 
     vl->addWidget(make_section_panel("4", tr("SUBSCRIPTION PLANS"),
-                                     tr("Fincept Terminal offers tiered access:\n\n"
+                                     tr("Numery Terminal offers tiered access:\n\n"
                                         "■  FREE — Basic market data, limited screens, paper trading\n"
                                         "■  PRO — Full market data, all screens, real trading, AI chat\n"
                                         "■  ENTERPRISE — Everything + API access, priority support\n\n"
@@ -169,7 +169,7 @@ QWidget* DocsScreen::page_keyboard_shortcuts() {
             {tr("GLOBAL SHORTCUTS"), tr("F11  — Toggle fullscreen mode\n"
                                         "F10  — Toggle focus mode (hides tab bar and status bar)\n"
                                         "F5   — Refresh the current screen data\n"
-                                        "Ctrl+P — Capture screenshot (saved to ~/FinceptScreenshot_*.png)")},
+                                        "Ctrl+P — Capture screenshot (saved to ~/NumeryScreenshot_*.png)")},
             {tr("FILE MENU"), tr("New Workspace — Create a fresh workspace layout\n"
                                  "Open Workspace — Load a saved workspace\n"
                                  "Save Workspace — Persist current layout\n"

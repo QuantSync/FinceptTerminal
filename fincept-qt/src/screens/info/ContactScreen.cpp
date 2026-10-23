@@ -195,7 +195,7 @@ QWidget* ContactScreen::build_page() {
         hl->addWidget(email_btn);
 
         auto* discord_btn = make_action(tr("Join Discord"));
-        discord_btn->setAccessibleName(tr("Open the Fincept Discord server"));
+        discord_btn->setAccessibleName(tr("Open the Numery Discord server"));
         connect(discord_btn, &QPushButton::clicked, this,
                 []() { QDesktopServices::openUrl(QUrl("https://discord.gg/ae87a8ygbN")); });
         hl->addWidget(discord_btn);

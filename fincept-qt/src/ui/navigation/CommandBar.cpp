@@ -341,7 +341,7 @@ void CommandBar::build_commands() {
         // Community / Info
         {"about",
          tr("About"),
-         "About Fincept Terminal",
+         "About Numery Terminal",
          {"about", "info", "version"},
          "",
          {"about", "information", "version"}},

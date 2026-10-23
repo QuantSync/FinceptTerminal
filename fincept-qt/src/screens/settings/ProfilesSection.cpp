@@ -115,7 +115,7 @@ QWidget* ProfilesSection::build_content() {
                 // on a single unconfirmed click.
                 const auto reply = QMessageBox::question(
                     this, tr("Switch Profile"),
-                    tr("Switch to profile \"%1\"?\n\nFincept Terminal will restart. Unsaved work in the "
+                    tr("Switch to profile \"%1\"?\n\nNumery Terminal will restart. Unsaved work in the "
                        "current session may be lost.")
                         .arg(name),
                     QMessageBox::Yes | QMessageBox::No, QMessageBox::No);
@@ -170,7 +170,7 @@ QWidget* ProfilesSection::build_content() {
         }
         const auto reply =
             QMessageBox::question(this, tr("Create Profile"),
-                                  tr("Create profile \"%1\" and switch to it?\n\nFincept Terminal will restart. "
+                                  tr("Create profile \"%1\" and switch to it?\n\nNumery Terminal will restart. "
                                      "Unsaved work in the current session may be lost.")
                                       .arg(name),
                                   QMessageBox::Yes | QMessageBox::No, QMessageBox::No);

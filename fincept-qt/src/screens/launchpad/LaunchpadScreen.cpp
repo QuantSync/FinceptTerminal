@@ -95,7 +95,7 @@ LaunchpadScreen* LaunchpadScreen::instance() {
 }
 
 LaunchpadScreen::LaunchpadScreen(QWidget* parent) : QMainWindow(parent) {
-    setWindowTitle(tr("Fincept Launchpad"));
+    setWindowTitle(tr("Numery Launchpad"));
     setMinimumSize(480, 320);
     resize(480, 320);
 
@@ -271,7 +271,7 @@ void LaunchpadScreen::changeEvent(QEvent* event) {
 }
 
 void LaunchpadScreen::retranslateUi() {
-    setWindowTitle(tr("Fincept Launchpad"));
+    setWindowTitle(tr("Numery Launchpad"));
 
     if (greeting_) {
         const QString profile = ProfileManager::instance().active();
@@ -458,7 +458,7 @@ void LaunchpadScreen::on_switch_profile() {
     // instant the picker was dismissed with OK.
     const auto reply = QMessageBox::question(
         this, tr("Switch Profile"),
-        tr("Switch to profile \"%1\"?\n\nFincept Terminal will restart.").arg(target),
+        tr("Switch to profile \"%1\"?\n\nNumery Terminal will restart.").arg(target),
         QMessageBox::Yes | QMessageBox::No, QMessageBox::No);
     if (reply != QMessageBox::Yes)
         return;

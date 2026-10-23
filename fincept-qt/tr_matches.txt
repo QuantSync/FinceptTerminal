@@ -1,0 +1,102 @@
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\app\main.cpp:852: QMessageBox::critical(nullptr, QObject::tr("Fincept Terminal — database error"),
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\app\WindowFrame.cpp:776: tr("Fincept Layout (*.flayout *.fwsp);;All Files (*)"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\app\WindowFrame.cpp:788: tr("Fincept Layout (*.flayout)"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\auth\GoogleDesktopLogin.cpp:94: send_page(sock, tr("Fincept"), tr("Malformed request."));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\auth\GoogleDesktopLogin.cpp:105: send_page(sock, tr("Fincept"), tr("Malformed request."));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\auth\GoogleDesktopLogin.cpp:116: send_page(sock, tr("Fincept"), tr("Request rejected."));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\auth\GoogleDesktopLogin.cpp:156: send_page(sock, tr("Fincept"), tr("Request rejected."));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\auth\GoogleDesktopLogin.cpp:165: send_page(sock, tr("Fincept Terminal"), tr("Waiting for sign-in to complete…"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\auth\GoogleDesktopLogin.cpp:171: send_page(sock, tr("Fincept Terminal"), tr("Login already completed — you can close this tab."));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\auth\GoogleDesktopLogin.cpp:181: send_page(sock, tr("Login complete"), tr("You can close this tab and return to Fincept Terminal."));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\mcp\tools\MAAnalyticsTools.cpp:1734: {"strategy_id", str("Registered Fincept strategy id, e.g. FCT-19E8A564.")},
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\about\AboutScreen.cpp:187: copyright_ = new QLabel(tr("© 2024-2026 Fincept Corporation. All rights reserved."));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\about\AboutScreen.cpp:248: enterprise_header_ = makePanelHeader("?", tr("FINCEPT TERMINAL ENTERPRISE"), ui::colors::AMBER);
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\about\AboutScreen.cpp:382: {tr("Fincept Enterprise"), "https://fincept.in/enterprise"},
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\about\AboutScreen.cpp:473: copyright_->setText(tr("© 2024-2026 Fincept Corporation. All rights reserved."));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\about\AboutScreen.cpp:484: setPanelHeaderText(enterprise_header_, "?", tr("FINCEPT TERMINAL ENTERPRISE"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\about\AboutScreen.cpp:514: resource_btns_[2]->setText(tr("Fincept Enterprise"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\ai_chat\AiChatScreen.cpp:242: input_box_->setPlaceholderText(tr("Message Fincept AI..."));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\ai_chat\AiChatScreen_Layout.cpp:466: input_box_->setPlaceholderText(tr("Message Fincept AI..."));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\ai_chat\AiChatScreen_Layout.cpp:476: input_box_->setAccessibleName(tr("Message Fincept AI"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\ai_chat\AiChatScreen_Messaging.cpp:630: const QString prov_display = is_fincept ? tr("Fincept LLM") : provider_raw.toUpper();
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\ai_chat\AiChatScreen_Messaging.cpp:633: const QString model_display = is_fincept ? tr("Fincept LLM") : model_raw;
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\ai_chat\AiChatScreen_Messaging.cpp:642: model_lbl_->setText(is_fincept ? tr("Managed by Fincept") : model_short);
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\ai_chat\AiChatScreen_Messaging.cpp:643: model_lbl_->setToolTip(is_fincept ? tr("Fincept LLM — managed AI service") : model_raw);
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\ai_chat\AiChatScreen_Messaging.cpp:648: hdr_model_lbl_->setText(tr("Fincept LLM"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\ai_chat\AiChatScreen_Messaging.cpp:649: hdr_model_lbl_->setToolTip(tr("Fincept managed AI service\n\nChange in Settings > LLM Configuration"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\auth\LoginScreen.cpp:384: email_input_->setAccessibleDescription(tr("The email address of your Fincept account"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\chat_mode\ChatMessagePanel.cpp:182: welcome_logo_lbl_ = new QLabel(tr("FINCEPT AGENT"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\chat_mode\ChatMessagePanel.cpp:277: input_box_->setAccessibleName(tr("Message the Fincept agent"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\chat_mode\ChatMessagePanel.cpp:762: welcome_logo_lbl_->setText(tr("FINCEPT AGENT"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\code_editor\CodeEditorScreen.cpp:208: header_title_ = new QLabel(tr("FINCEPT NOTEBOOK"), bar);
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\code_editor\CodeEditorScreen.cpp:808: QFileDialog::getOpenFileName(this, tr("Open Notebook"), {}, tr("Fincept Notebooks (*.ipynb);;All Files (*)"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\code_editor\CodeEditorScreen.cpp:900: tr("Fincept Notebooks (*.ipynb)"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\code_editor\CodeEditorScreen.cpp:1051: header_title_->setText(tr("FINCEPT NOTEBOOK"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\crypto_center\panels\ActiveLocksPanel.cpp:382: extend->setToolTip(tr("fincept_lock not deployed — Settings > Lock program ID"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\crypto_center\panels\ActiveLocksPanel.cpp:384: withdraw->setToolTip(tr("fincept_lock not deployed — Settings > Lock program ID"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\crypto_center\panels\MarketsListPanel.cpp:167: set_status_error(tr("FinceptInternalAdapter not registered"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\crypto_center\panels\TierPanel.cpp:301: footer_->setText(tr("All Fincept Terminal features unlocked."));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\dashboard\widgets\VideoPlayerWidget.cpp:288: status_label_->setText(tr("yt-dlp not found. Bundle yt-dlp.exe next to FinceptTerminal.exe."));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\docs\DocsScreen_Pages_Intro.cpp:39: vl->addWidget(make_heading(tr("FINCEPT TERMINAL  —  DOCUMENTATION")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\docs\DocsScreen_Pages_Intro.cpp:51: make_section_panel("¦", tr("WHAT IS FINCEPT TERMINAL?"),
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\docs\DocsScreen_Pages_Intro.cpp:113: vl->addWidget(make_muted_label(tr("Your first steps with Fincept Terminal")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\economics\panels\FinceptMacroPanel.cpp:40: coming_soon_lbl_ = new QLabel(tr("FINCEPT MACRO — COMING SOON"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\economics\panels\FinceptMacroPanel.cpp:64: coming_soon_lbl_->setText(tr("FINCEPT MACRO — COMING SOON"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\ContactScreen.cpp:198: discord_btn->setAccessibleName(tr("Open the Fincept Discord server"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\ContactScreen.cpp:239: tr("Use the Forgot Password option on the login screen, or contact support@fincept.in")},
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\HelpScreen.cpp:163: auto* sub = new QLabel(tr("Find answers, get support, and connect with the Fincept community."));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\HelpScreen.cpp:366: vl->addWidget(section_header(tr("GETTING STARTED"), tr("New to Fincept? Start here")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\HelpScreen.cpp:375: {"1", tr("Create an account"), tr("Register at fincept.in or use the in-app sign-up.")},
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\PrivacyScreen.cpp:203: pvl->addWidget(body_text(tr("Privacy Officer: support@fincept.in")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\TermsScreen.cpp:109: body_text(tr("By accessing or using Fincept Terminal (\"the Service\"), you agree to be bound by these "
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\TermsScreen.cpp:162: pvl->addWidget(body_text(tr("For questions about these Terms, contact us at support@fincept.in")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\TrademarksScreen.cpp:104: pvl->addWidget(heading("1", tr("FINCEPT TRADEMARKS")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\TrademarksScreen.cpp:109: pvl->addWidget(bullet(tr("Fincept Logo and associated visual identities")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\TrademarksScreen.cpp:122: pvl->addWidget(bullet(tr("Referring to Fincept products in editorial or descriptive contexts")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\TrademarksScreen.cpp:123: pvl->addWidget(bullet(tr("Linking to official Fincept resources")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\TrademarksScreen.cpp:128: pvl->addWidget(bullet(tr("Using Fincept marks to imply endorsement or affiliation")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\TrademarksScreen.cpp:129: pvl->addWidget(bullet(tr("Modifying or altering any Fincept trademark")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\TrademarksScreen.cpp:130: pvl->addWidget(bullet(tr("Using Fincept marks in domain names or product names")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\TrademarksScreen.cpp:134: pvl->addWidget(body(tr("Copyright 2024-2026 Fincept Corporation. All rights reserved.")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\TrademarksScreen.cpp:162: pvl->addWidget(body(tr("To report trademark infringement, contact: support@fincept.in")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\TrademarksScreen.cpp:165: pvl->addWidget(body(tr("Fincept Corporation — Legal Department")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\info\TrademarksScreen.cpp:166: pvl->addWidget(body(tr("Email: support@fincept.in")));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\launchpad\LaunchpadScreen.cpp:98: setWindowTitle(tr("Fincept Launchpad"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\launchpad\LaunchpadScreen.cpp:274: setWindowTitle(tr("Fincept Launchpad"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\launchpad\LaunchpadScreen.cpp:461: tr("Switch to profile \"%1\"?\n\nFincept Terminal will restart.").arg(target),
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\launchpad\OnboardingTour.cpp:56: setWindowTitle(tr("Welcome to Fincept Terminal"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\launchpad\OnboardingTour.cpp:156: setWindowTitle(tr("Welcome to Fincept Terminal"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\maritime\MaritimeScreen.cpp:207: brand_label_->setText(tr("FINCEPT MARITIME INTELLIGENCE"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\maritime\MaritimeScreen.cpp:209: classified_label_->setText(tr("VESSEL TRACKING // FINCEPT MARINE API"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\maritime\MaritimeScreen_Handlers.cpp:494: const QString label = module.isEmpty() ? tr("FINCEPT MARINE API") : module.toUpper();
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\maritime\MaritimeScreen_Layout.cpp:80: brand_label_ = new QLabel(tr("FINCEPT MARITIME INTELLIGENCE"), bar);
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\markets\MarketsScreen.cpp:344: brand_label_ = new QLabel(tr("FINCEPT MARKETS"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\markets\MarketsScreen.cpp:735: brand_label_->setText(tr("FINCEPT MARKETS"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\portfolio\PortfolioScreen_Handlers.cpp:410: svc.create_portfolio(tr("Demo Portfolio"), tr("Fincept User"), "USD", tr("Sample portfolio for demonstration"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\profile\ProfileScreen.cpp:902: tr("This will permanently delete your Fincept account (%1) and all associated data.\n\n"
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\profile\ProfileScreen.cpp:984: tr("Account deletion failed: %1\n\nPlease contact support@fincept.in").arg(r.error));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\recovery\CrashRecoveryDialog.cpp:46: setWindowTitle(tr("Fincept Terminal — Recover Previous Session"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\recovery\CrashRecoveryDialog.cpp:176: setWindowTitle(tr("Fincept Terminal — Recover Previous Session"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\relationship_map\RelationshipMapScreen.cpp:314: status_brand_ = new QLabel(tr("FINCEPT TERMINAL"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\relationship_map\RelationshipMapScreen.cpp:875: status_brand_->setText(tr("FINCEPT TERMINAL"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\report_builder\ReportBuilderScreen_Dialogs.cpp:436: QFileDialog::getOpenFileName(this, tr("Open Report"), "", tr("Fincept Report (*.fincept);;JSON (*.json)"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\report_builder\ReportBuilderScreen_Dialogs.cpp:450: tr("Fincept Report (*.fincept);;JSON (*.json)"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\settings\CloudSyncSection.cpp:94: title_ = new QLabel(tr("Fincept Cloud Sync"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\settings\CloudSyncSection.cpp:223: title_->setText(tr("Fincept Cloud Sync"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\settings\LlmConfigSection_Providers.cpp:572: tr("Linked to your Fincept account: ••••%1").arg(stored.right(4)));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\settings\LlmConfigSection_Providers.cpp:574: api_key_edit_->setPlaceholderText(tr("Login to your Fincept account to enable"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\settings\LlmConfigSection_Providers.cpp:617: api_key_edit_->setPlaceholderText(tr("Linked to your Fincept account: ••••%1").arg(stored.right(4)));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\settings\LlmConfigSection_Providers.cpp:619: api_key_edit_->setPlaceholderText(tr("Login to your Fincept account to enable"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\settings\LlmConfigSection_Providers.cpp:737: show_status(tr("Cannot remove built-in Fincept provider"), true);
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\settings\LlmConfigSection_Providers.cpp:781: show_status(tr("Fincept connected — API key active"), false);
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\settings\LlmConfigSection_Providers.cpp:783: show_status(tr("Not connected — login to your Fincept account first"), true);
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\settings\LlmConfigSection_Providers.cpp:825: show_status(tr("Fincept manages models automatically"), false);
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\settings\NotificationsSection.cpp:286: req.title = tr("Fincept Test");
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\settings\NotificationsSection.cpp:287: req.message = tr("This is a test notification from Fincept Terminal.");
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\setup\SetupScreen.cpp:393: text = tr("Everything is ready! Launching Fincept Terminal...");
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\screens\support\SupportScreen_Actions.cpp:73: demo["subject"] = tr("Welcome to Fincept Support");
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\ui\navigation\ToolBar.cpp:186: upgrade_btn_->setToolTip(tr("Upgrade to Fincept Terminal Enterprise — the private edition"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\ui\navigation\ToolBar.cpp:528: m->addAction(tr("About Fincept"), this, [this]() { emit navigate_to("about"); });
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\ui\widgets\EnterprisePromo.cpp:197: setWindowTitle(tr("Upgrade to Fincept Terminal Enterprise"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\ui\widgets\EnterprisePromo.cpp:201: title_label_->setText(tr("Fincept Terminal Enterprise"));
+C:\Users\anubh\StudioProjects\FinceptTerminal\fincept-qt\src\ui\widgets\EnterprisePromo.cpp:270: auto* head = new QLabel(QObject::tr("FINCEPT TERMINAL ENTERPRISE"), panel);

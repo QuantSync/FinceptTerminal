@@ -433,7 +433,7 @@ void ReportBuilderScreen::on_open() {
     if (!confirm_replace_document(tr("Open Report")))
         return;
     QString path =
-        QFileDialog::getOpenFileName(this, tr("Open Report"), "", tr("Fincept Report (*.fincept);;JSON (*.json)"));
+        QFileDialog::getOpenFileName(this, tr("Open Report"), "", tr("Numery Report (*.numery *.fincept);;JSON (*.json)"));
     if (path.isEmpty())
         return;
     auto r = Service::instance().load_from(path);
@@ -447,14 +447,15 @@ void ReportBuilderScreen::on_save() {
     QString path = svc.current_file();
     if (path.isEmpty()) {
         path = QFileDialog::getSaveFileName(this, tr("Save Report"), svc.metadata().title,
-                                            tr("Fincept Report (*.fincept);;JSON (*.json)"));
+                                            tr("Numery Report (*.numery *.fincept);;JSON (*.json)"));
         if (path.isEmpty())
             return;
         // QFileDialog does not append the filter suffix on every platform; a
-        // report saved without one won't reopen through the *.fincept filter.
-        if (!path.endsWith(QLatin1String(".fincept"), Qt::CaseInsensitive) &&
+        // report saved without one won't reopen through the filter.
+        if (!path.endsWith(QLatin1String(".numery"), Qt::CaseInsensitive) &&
+            !path.endsWith(QLatin1String(".fincept"), Qt::CaseInsensitive) &&
             !path.endsWith(QLatin1String(".json"), Qt::CaseInsensitive))
-            path += QLatin1String(".fincept");
+            path += QLatin1String(".numery");
     }
     auto r = svc.save_to(path);
     if (r.is_err()) {

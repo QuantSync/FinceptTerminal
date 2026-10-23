@@ -38,7 +38,7 @@ QString ProviderCatalog::display_name(const QString& provider_id) {
         {"kimi", "Kimi"},
         {"ollama", "Ollama"},
         {"xai", "xAI"},
-        {"fincept", "Fincept LLM (recommended)"},
+        {"fincept", "Numery LLM (recommended)"},
         {"astraflow", "AstraFlow"},
         {"astraflow_cn", "AstraFlow CN"},
         {"aihubmix", "AIHubMix"},

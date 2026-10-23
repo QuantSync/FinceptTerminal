@@ -160,7 +160,7 @@ QWidget* HelpScreen::build_page() {
                                  .arg(colors::AMBER(), MF));
         text_vl->addWidget(title);
 
-        auto* sub = new QLabel(tr("Find answers, get support, and connect with the Fincept community."));
+        auto* sub = new QLabel(tr("Find answers, get support, and connect with the Numery community."));
         sub->setStyleSheet(
             QString("color: %1; font-size: 12px; background: transparent; %2").arg(colors::TEXT_SECONDARY(), MF));
         text_vl->addWidget(sub);
@@ -331,11 +331,11 @@ QWidget* HelpScreen::build_page() {
 
             {"", tr("How do I connect a broker?"),
              tr("Navigate to Settings → Brokers, select your broker from the list, and enter your "
-                "API key and secret. Fincept supports 16 brokers including Zerodha, Angel One, "
+                "API key and secret. Numery supports 16 brokers including Zerodha, Angel One, "
                 "Upstox, Interactive Brokers, and more.")},
 
             {"", tr("Why does Python install at first launch?"),
-             tr("Fincept embeds Python 3.11 for its analytics scripts covering equity, "
+             tr("Numery embeds Python 3.11 for its analytics scripts covering equity, "
                 "portfolio, derivatives, and quant analysis. The one-time install happens "
                 "automatically in the background.")},
 
@@ -346,7 +346,7 @@ QWidget* HelpScreen::build_page() {
 
             {"", tr("Is my data secure?"),
              tr("Credentials are stored encrypted via SecureStorage (OS keychain on each platform). "
-                "API keys are never logged or sent to Fincept servers — they are used only for "
+                "API keys are never logged or sent to Numery servers — they are used only for "
                 "direct broker connections from your machine.")},
 
             {"", tr("How do I report a bug?"),
@@ -363,7 +363,7 @@ QWidget* HelpScreen::build_page() {
 
     // ── Getting Started ────────────────────────────────────────────────────────
     {
-        vl->addWidget(section_header(tr("GETTING STARTED"), tr("New to Fincept? Start here")));
+        vl->addWidget(section_header(tr("GETTING STARTED"), tr("New to Numery? Start here")));
         vl->addSpacing(8);
 
         struct Step {

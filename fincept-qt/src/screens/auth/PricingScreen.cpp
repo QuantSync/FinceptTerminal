@@ -178,7 +178,7 @@ void PricingScreen::retranslateUi() {
         title_label_->setText(tr("PLANS & PRICING — OPEN-SOURCE EDITION"));
     if (subtitle_label_)
         subtitle_label_->setText(tr("Credits and limits for this open-source terminal. "
-                                    "Fincept Terminal Enterprise is a separate product, billed separately."));
+                                    "Numery Terminal Enterprise is a separate product, billed separately."));
     if (loading_label_)
         loading_label_->setText(loading_is_refresh_ ? tr("Updating plan status...") : tr("Loading plans..."));
 }

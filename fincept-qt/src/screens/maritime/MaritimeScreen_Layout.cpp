@@ -77,7 +77,7 @@ QWidget* MaritimeScreen::build_top_bar() {
     accent->setStyleSheet(QString("background:%1; border-radius:2px;").arg(C(ui::colors::AMBER)));
     hl->addWidget(accent);
 
-    brand_label_ = new QLabel(tr("FINCEPT MARITIME INTELLIGENCE"), bar);
+    brand_label_ = new QLabel(tr("NUMERY MARITIME INTELLIGENCE"), bar);
     hl->addWidget(brand_label_);
 
     hl->addStretch(1);

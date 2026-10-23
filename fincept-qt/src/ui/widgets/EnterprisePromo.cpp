@@ -194,11 +194,11 @@ void UpgradeDialog::changeEvent(QEvent* event) {
 }
 
 void UpgradeDialog::retranslateUi() {
-    setWindowTitle(tr("Upgrade to Fincept Terminal Enterprise"));
+    setWindowTitle(tr("Upgrade to Numery Terminal Enterprise"));
     if (kicker_label_)
         kicker_label_->setText(tr("PRIVATE EDITION"));
     if (title_label_)
-        title_label_->setText(tr("Fincept Terminal Enterprise"));
+        title_label_->setText(tr("Numery Terminal Enterprise"));
     if (pitch_label_)
         pitch_label_->setText(tr("You are running the free open-source build. Enterprise is the private edition "
                                  "the team develops daily — built for funds, family offices and research desks."));
@@ -267,7 +267,7 @@ QWidget* make_enterprise_banner(QWidget* parent) {
     text_col->setContentsMargins(0, 0, 0, 0);
     text_col->setSpacing(3);
 
-    auto* head = new QLabel(QObject::tr("FINCEPT TERMINAL ENTERPRISE"), panel);
+    auto* head = new QLabel(QObject::tr("NUMERY TERMINAL ENTERPRISE"), panel);
     head->setObjectName("entBannerHead");
     text_col->addWidget(head);
 
@@ -283,7 +283,7 @@ QWidget* make_enterprise_banner(QWidget* parent) {
     // sitting next to a list of purchasable plans, it would otherwise read as
     // just another tier of the same product.
     auto* note = new QLabel(QObject::tr("Separate product, separate account. Enterprise is billed and signed in "
-                                        "separately — plans on this page do not apply to it, and a Fincept "
+                                        "separately — plans on this page do not apply to it, and a Numery "
                                         "account from this terminal will not sign in to Enterprise."),
                             panel);
     note->setObjectName("entBannerNote");

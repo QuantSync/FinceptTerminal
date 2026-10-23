@@ -1,4 +1,4 @@
-﻿#include "services/notifications/providers/PagerDutyProvider.h"
+#include "services/notifications/providers/PagerDutyProvider.h"
 
 #include "network/http/HttpClient.h"
 
@@ -40,7 +40,7 @@ void PagerDutyProvider::send(const NotificationRequest& req, std::function<void(
     QJsonObject payload;
     payload["summary"] = req.title + ": " + req.message;
     payload["severity"] = severity;
-    payload["source"] = "Fincept Terminal";
+    payload["source"] = "Numery Terminal";
     payload["timestamp"] = req.timestamp.toUTC().toString(Qt::ISODate);
     payload["custom_details"] = custom_details;
 

@@ -96,8 +96,8 @@ void SetupScreen::build_ui() {
     cl->setSpacing(8);
 
     // ── Title block ───────────────────────────────────────────────────────────
-    // FINCEPT TERMINAL — brand, not translated.
-    title_lbl_ = new QLabel(QStringLiteral("FINCEPT TERMINAL"), center);
+    // NUMERY TERMINAL — brand, not translated.
+    title_lbl_ = new QLabel(QStringLiteral("NUMERY TERMINAL"), center);
     title_lbl_->setAlignment(Qt::AlignCenter);
     title_lbl_->setStyleSheet(QString("color:%1; font-family:%2; font-size:24px; font-weight:700; letter-spacing:3px;")
                                   .arg(kAccent, fonts::DATA_FAMILY));
@@ -390,7 +390,7 @@ void SetupScreen::update_status_label() {
             color = kAccent;
             break;
         case StatusState::AllDone:
-            text = tr("Everything is ready! Launching Fincept Terminal...");
+            text = tr("Everything is ready! Launching Numery Terminal...");
             color = colors::GREEN();
             break;
         case StatusState::AnyDone:

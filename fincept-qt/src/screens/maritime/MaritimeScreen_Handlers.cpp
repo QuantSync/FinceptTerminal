@@ -491,7 +491,7 @@ void MaritimeScreen::on_health_loaded(QJsonObject payload) {
     const qint64 total = d.value("database").toObject().value("total_records").toVariant().toLongLong();
 
     if (source_value_) {
-        const QString label = module.isEmpty() ? tr("FINCEPT MARINE API") : module.toUpper();
+        const QString label = module.isEmpty() ? tr("NUMERY MARINE API") : module.toUpper();
         const QString color = status == QStringLiteral("healthy") ? ui::colors::POSITIVE() : ui::colors::AMBER();
         source_value_->setText(label);
         source_value_->setStyleSheet(QString("color:%1; font-size:10px; font-weight:700; font-family:%2;")

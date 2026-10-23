@@ -179,7 +179,7 @@ QWidget* ChatMessagePanel::build_welcome() {
     vl->setSpacing(14);
     vl->setAlignment(Qt::AlignCenter);
 
-    welcome_logo_lbl_ = new QLabel(tr("FINCEPT AGENT"));
+    welcome_logo_lbl_ = new QLabel(tr("NUMERY AGENT"));
     welcome_logo_lbl_->setAlignment(Qt::AlignCenter);
     welcome_logo_lbl_->setStyleSheet(QString("color:%1;font-size:20px;font-weight:700;letter-spacing:1px;"
                                              "font-family:%2;background:transparent;")
@@ -274,7 +274,7 @@ QWidget* ChatMessagePanel::build_input_area() {
                                   .arg(ui::colors::BG_RAISED(), ui::colors::TEXT_PRIMARY(), ui::colors::BORDER_DIM(),
                                        FONT, ui::colors::BORDER_BRIGHT(), ui::colors::BORDER_MED()));
     input_box_->installEventFilter(this);
-    input_box_->setAccessibleName(tr("Message the Fincept agent"));
+    input_box_->setAccessibleName(tr("Message the Numery agent"));
     input_box_->setAccessibleDescription(
         tr("Type a question. Enter or Ctrl+Enter sends, Shift+Enter inserts a new line."));
     vl->addWidget(input_box_);
@@ -759,7 +759,7 @@ void ChatMessagePanel::retranslateUi() {
 
     // Welcome panel
     if (welcome_logo_lbl_)
-        welcome_logo_lbl_->setText(tr("FINCEPT AGENT"));
+        welcome_logo_lbl_->setText(tr("NUMERY AGENT"));
     if (welcome_sub_lbl_)
         welcome_sub_lbl_->setText(tr("AI-powered financial intelligence.\n"
                                      "Markets, equities, portfolio, macro insights."));

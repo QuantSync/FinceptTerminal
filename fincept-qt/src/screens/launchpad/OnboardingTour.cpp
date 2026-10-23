@@ -53,7 +53,7 @@ void OnboardingTour::show_for(QWidget* parent) {
 }
 
 OnboardingTour::OnboardingTour(QWidget* parent) : QDialog(parent) {
-    setWindowTitle(tr("Welcome to Fincept Terminal"));
+    setWindowTitle(tr("Welcome to Numery Terminal"));
     setModal(true);
     setSizeGripEnabled(false);
     resize(560, 360);
@@ -153,7 +153,7 @@ void OnboardingTour::changeEvent(QEvent* event) {
 }
 
 void OnboardingTour::retranslateUi() {
-    setWindowTitle(tr("Welcome to Fincept Terminal"));
+    setWindowTitle(tr("Welcome to Numery Terminal"));
     if (heading_)
         heading_->setText(tr("A 30-second tour"));
 

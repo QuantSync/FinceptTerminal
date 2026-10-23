@@ -25,25 +25,25 @@ FinceptMacroPanel::FinceptMacroPanel(QWidget* parent)
 }
 
 void FinceptMacroPanel::activate() {
-    show_empty(tr("Fincept Macro — Coming Soon\n\n"
+    show_empty(tr("Numery Macro — Coming Soon\n\n"
                   "Planned data:\n"
                   "  · Central bank rates (40+ countries)\n"
                   "  · Sovereign debt metrics\n"
-                  "  · Fincept proprietary macro indices\n"
+                  "  · Numery proprietary macro indices\n"
                   "  · Global inflation dashboard\n"
                   "  · Emerging market indicators\n\n"
-                  "Requires Fincept subscription + API key\n"
+                  "Requires Numery subscription + API key\n"
                   "Check back in a future release"));
 }
 
 void FinceptMacroPanel::build_controls(QHBoxLayout* thl) {
-    coming_soon_lbl_ = new QLabel(tr("FINCEPT MACRO — COMING SOON"));
+    coming_soon_lbl_ = new QLabel(tr("NUMERY MACRO — COMING SOON"));
     coming_soon_lbl_->setStyleSheet(ctrl_label_style() + "letter-spacing:1px;");
     thl->addWidget(coming_soon_lbl_);
 }
 
 void FinceptMacroPanel::on_fetch() {
-    show_empty(tr("Fincept Macro data script is not yet available.\n"
+    show_empty(tr("Numery Macro data script is not yet available.\n"
                   "This panel will be enabled in a future release."));
 }
 
@@ -61,7 +61,7 @@ void FinceptMacroPanel::changeEvent(QEvent* event) {
 
 void FinceptMacroPanel::retranslateUi() {
     if (coming_soon_lbl_)
-        coming_soon_lbl_->setText(tr("FINCEPT MACRO — COMING SOON"));
+        coming_soon_lbl_->setText(tr("NUMERY MACRO — COMING SOON"));
     EconPanelBase::retranslateUi();
 }
 

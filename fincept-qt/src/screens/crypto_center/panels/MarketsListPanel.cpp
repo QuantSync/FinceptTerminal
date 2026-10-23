@@ -164,7 +164,7 @@ void MarketsListPanel::showEvent(QShowEvent* e) {
         return;
     auto* adapter = fincept_adapter();
     if (!adapter) {
-        set_status_error(tr("FinceptInternalAdapter not registered"));
+        set_status_error(tr("Numery internal adapter not registered"));
         return;
     }
     set_status_demo(adapter->is_demo_mode());

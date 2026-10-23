@@ -70,7 +70,7 @@ void SupportScreen::load_tickets() {
         // they get translated downstream.
         QJsonObject demo;
         demo["id"] = "DEMO-001";
-        demo["subject"] = tr("Welcome to Fincept Support");
+        demo["subject"] = tr("Welcome to Numery Support");
         demo["status"] = "resolved";
         demo["priority"] = "low";
         demo["category"] = "general";
@@ -275,7 +275,7 @@ void SupportScreen::rebuild_ticket_rows() {
                     // not a live date. Translated for the localized month name.
                     mh->addWidget(lbl(tr("1 Jan 2026"), ui::colors::TEXT_TERTIARY(), 10));
                     ml->addLayout(mh);
-                    auto* mb = lbl(tr("Welcome to Fincept! This demo ticket shows how the support system works.\n"
+                    auto* mb = lbl(tr("Welcome to Numery! This demo ticket shows how the support system works.\n"
                                       "Create a real ticket and our team will respond within 24 hours."),
                                    ui::colors::TEXT_PRIMARY(), 12, false, true);
                     ml->addWidget(mb);

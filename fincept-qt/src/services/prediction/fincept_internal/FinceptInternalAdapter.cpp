@@ -103,7 +103,7 @@ QString FinceptInternalAdapter::id() const {
 }
 
 QString FinceptInternalAdapter::display_name() const {
-    return QStringLiteral("Fincept Internal");
+    return QStringLiteral("Numery Internal");
 }
 
 ExchangeCapabilities FinceptInternalAdapter::capabilities() const {
@@ -435,7 +435,7 @@ void FinceptInternalAdapter::emit_mock_tags() {
 
 void FinceptInternalAdapter::emit_demo_unavailable(const QString& context) {
     QPointer<FinceptInternalAdapter> self = this;
-    const auto msg = QStringLiteral("Fincept Internal markets are in demo mode — set "
+    const auto msg = QStringLiteral("Numery Internal markets are in demo mode — set "
                                     "`fincept.markets_endpoint` in SecureStorage to enable live data.");
     QTimer::singleShot(0, this, [self, context, msg]() {
         if (!self)

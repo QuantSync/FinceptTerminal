@@ -53,6 +53,12 @@ class DashboardToolBar : public QWidget {
     QPushButton* save_btn_ = nullptr;
     QPushButton* reset_btn_ = nullptr;
     QTimer clock_timer_;
+
+    // ── Centre designer credit (typing animation) ────────────────────────────────
+    QLabel*  credit_lbl_   = nullptr;
+    QTimer*  typing_timer_ = nullptr;
+    int      typing_idx_   = 0;
+    void     start_typing_animation();
 };
 
 } // namespace fincept::screens

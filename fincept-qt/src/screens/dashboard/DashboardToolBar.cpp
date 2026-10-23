@@ -83,7 +83,30 @@ DashboardToolBar::DashboardToolBar(QWidget* parent) : QWidget(parent) {
     ll->addWidget(widget_count_);
 
     hl->addWidget(left);
-    hl->addStretch();
+
+    // ── Centre: red-boxed designer credit with typing animation ─────────────────
+    hl->addStretch(1);
+
+    credit_lbl_ = new QLabel(this);
+    credit_lbl_->setAlignment(Qt::AlignCenter);
+    credit_lbl_->setObjectName("dtCredit");
+    // Red border box, transparent fill, bold white text — matches screenshot area
+    credit_lbl_->setStyleSheet(
+        "QLabel#dtCredit {"
+        "  color: #ffffff;"
+        "  font-size: 11px;"
+        "  font-weight: 700;"
+        "  font-family: 'Consolas','Courier New',monospace;"
+        "  letter-spacing: 1px;"
+        "  background: transparent;"
+        "  border: 1px solid #cc0000;"
+        "  padding: 1px 10px;"
+        "}");
+    credit_lbl_->setFixedHeight(20);
+    credit_lbl_->setMinimumWidth(260);
+    hl->addWidget(credit_lbl_);
+
+    hl->addStretch(1);
 
     right_container_ = new QWidget(this);
     right_container_->setObjectName("dtRightContainer");
@@ -247,6 +270,10 @@ void DashboardToolBar::showEvent(QShowEvent* event) {
     update_clock();
     if (!clock_timer_.isActive())
         clock_timer_.start();
+    // (Re)start the typing animation every time the dashboard becomes visible.
+    if (typing_timer_ && typing_timer_->isActive())
+        return; // already running
+    QTimer::singleShot(300, this, &DashboardToolBar::start_typing_animation);
 }
 
 void DashboardToolBar::update_clock() {
@@ -307,6 +334,38 @@ void DashboardToolBar::retranslateUi() {
         pulse_btn_->setToolTip(tr("Show / hide the Market Pulse panel (Ctrl+P)"));
     apply_accessibility();
     update_clock();
+}
+
+// ── Typing animation for designer credit ─────────────────────────────────────
+
+void DashboardToolBar::start_typing_animation() {
+    if (!credit_lbl_)
+        return;
+
+    static const QString full_text = QStringLiteral("Designed By Anubhav Singh Rajput");
+    typing_idx_ = 0;
+    credit_lbl_->setText(QStringLiteral("\u2588")); // start with block cursor
+
+    if (!typing_timer_) {
+        typing_timer_ = new QTimer(this);
+        typing_timer_->setInterval(60); // ms per character
+        connect(typing_timer_, &QTimer::timeout, this, [this]() {
+            if (!credit_lbl_)
+                return;
+            static const QString full = QStringLiteral("Designed By Anubhav Singh Rajput");
+            if (typing_idx_ <= full.size()) {
+                // Typed characters + blinking block cursor
+                credit_lbl_->setText(full.left(typing_idx_) + QStringLiteral("\u2588"));
+                ++typing_idx_;
+            } else {
+                // Done typing — show final text without cursor, pause, then loop
+                typing_timer_->stop();
+                credit_lbl_->setText(full);
+                QTimer::singleShot(3500, this, &DashboardToolBar::start_typing_animation);
+            }
+        });
+    }
+    typing_timer_->start();
 }
 
 } // namespace fincept::screens

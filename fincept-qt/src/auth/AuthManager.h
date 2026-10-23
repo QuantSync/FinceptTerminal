@@ -16,6 +16,7 @@ class AuthManager : public QObject {
 
     const SessionData& session() const { return session_; }
     bool is_authenticated() const { return session_.authenticated; }
+    bool is_guest() const { return is_guest_; }
     bool is_loading() const { return is_loading_; }
 
     /// Resolve the Fincept api_key for LLM/service callers WITHOUT touching the
@@ -28,6 +29,11 @@ class AuthManager : public QObject {
 
     // Auth flows
     void login(const QString& email, const QString& password, bool force_login = false);
+
+    /// Offline Guest Mode — sets a synthetic authenticated session that
+    /// bypasses all network auth. No credentials are required. The session
+    /// is not persisted; it resets when the app is closed or the user logs out.
+    void login_as_guest();
 
     /// Desktop Google sign-in via the website loopback handoff. Opens the
     /// browser, redeems the returned one-time code, then drives the same
@@ -101,6 +107,7 @@ class AuthManager : public QObject {
     SessionData session_;
     bool is_loading_ = true;
     bool is_logging_out_ = false;
+    bool is_guest_ = false;
 };
 
 } // namespace fincept::auth

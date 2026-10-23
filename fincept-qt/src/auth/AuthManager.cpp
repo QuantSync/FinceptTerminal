@@ -215,6 +215,9 @@ void AuthManager::clear_session() {
 }
 
 bool AuthManager::needs_pin_setup() const {
+    // Guest sessions have no account to protect — skip PIN gate entirely.
+    if (is_guest_)
+        return false;
     return session_.authenticated && !PinManager::instance().has_pin();
 }
 
@@ -407,6 +410,30 @@ void AuthManager::login_with_google() {
     flow->start();
 }
 
+// ── Guest Mode (offline, no credentials) ─────────────────────────────────────
+
+void AuthManager::login_as_guest() {
+    // Build a synthetic, fully-local session. No network calls are made.
+    // The account_type is set to "pro" so has_paid_plan() returns true and
+    // WindowFrame routes directly to the dashboard (not the pricing gate).
+    is_guest_ = true;
+
+    session_ = {};
+    session_.authenticated = true;
+    session_.user_info.username = "Guest";
+    session_.user_info.email = {};
+    session_.user_info.account_type = "pro";
+    session_.user_info.is_verified = true;
+    session_.subscription.account_type = "pro";
+    session_.has_subscription = true;
+
+    is_loading_ = false;
+
+    LOG_INFO("Auth", "Guest mode activated — bypassing authentication");
+    emit login_succeeded();
+    emit auth_state_changed();
+}
+
 void AuthManager::complete_desktop_login(const QString& api_key, const QString& session_token) {
     if (api_key.isEmpty()) {
         set_loading(false);
@@ -564,10 +591,12 @@ void AuthManager::logout() {
         return;
     is_logging_out_ = true;
 
-    if (!session_.api_key.isEmpty()) {
+    // For guest sessions there is no server-side session to invalidate.
+    if (!is_guest_ && !session_.api_key.isEmpty()) {
         AuthApi::instance().logout([](ApiResponse) {});
     }
 
+    is_guest_ = false;
     clear_session();
     is_logging_out_ = false;
 
@@ -582,6 +611,12 @@ void AuthManager::logout() {
 // If api_key is also invalid → truly expired, must re-login.
 
 void AuthManager::attempt_session_recovery(std::function<void(bool)> cb) {
+    // Guest sessions are local-only — there is nothing to recover.
+    if (is_guest_) {
+        if (cb)
+            cb(true); // stay alive
+        return;
+    }
     if (session_.api_key.isEmpty()) {
         if (cb)
             cb(false);
@@ -628,6 +663,9 @@ void AuthManager::attempt_session_recovery(std::function<void(bool)> cb) {
 // ── Refresh user data ────────────────────────────────────────────────────────
 
 void AuthManager::refresh_user_data() {
+    // Guest sessions are entirely local — no remote profile to refresh.
+    if (is_guest_)
+        return;
     if (!session_.authenticated || session_.api_key.isEmpty())
         return;
     // fetch_user_profile chains into fetch_user_subscription automatically

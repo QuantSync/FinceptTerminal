@@ -74,7 +74,7 @@ void WindowFrame::on_auth_state_changed() {
                     auth::InactivityGuard::instance().set_terminal_locked(true);
                     return;
                 }
-                if (auth::PinManager::instance().has_pin()) {
+                if (!auth.is_guest() && auth::PinManager::instance().has_pin()) {
                     LOG_INFO("WindowFrame", "Authenticated (on app stack) with PIN — showing PIN unlock");
                     lock_screen_->show_unlock();
                     locked_ = true;
@@ -108,7 +108,7 @@ void WindowFrame::on_auth_state_changed() {
                 auth::InactivityGuard::instance().set_terminal_locked(true);
                 return;
             }
-            if (auth::PinManager::instance().has_pin()) {
+            if (!auth.is_guest() && auth::PinManager::instance().has_pin()) {
                 LOG_INFO("WindowFrame", "Authenticated with PIN — showing PIN unlock");
                 lock_screen_->show_unlock();
                 locked_ = true;

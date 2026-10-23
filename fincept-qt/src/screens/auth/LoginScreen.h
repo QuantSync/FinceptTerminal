@@ -37,8 +37,7 @@ class LoginScreen : public QWidget {
     QLabel* no_account_lbl_ = nullptr;
     QPushButton* signup_btn_ = nullptr;
     QLabel* error_label_ = nullptr;
-    QPushButton* google_btn_ = nullptr;
-    QLabel* or_lbl_ = nullptr;
+    QPushButton* guest_btn_ = nullptr;
 
     // ── MFA page widgets ────────────────────────────────────────────────────
     QWidget* mfa_page_ = nullptr;

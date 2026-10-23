@@ -248,10 +248,9 @@ void UpgradeDialog::show_now(QWidget* parent) {
     dlg->open();
 }
 
-void UpgradeDialog::maybe_show_at_startup(QWidget* parent) {
-    if (!startup_prompt_enabled())
-        return;
-    show_now(parent);
+void UpgradeDialog::maybe_show_at_startup(QWidget* /*parent*/) {
+    // Disabled: never show the Enterprise upgrade popup at startup.
+    return;
 }
 
 // ── Inline banner ────────────────────────────────────────────────────────────

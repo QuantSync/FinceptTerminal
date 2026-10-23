@@ -371,6 +371,16 @@ void RegisterScreen::build_form_page() {
     lrl->addWidget(signin_btn_);
     vl->addWidget(login_row);
 
+    // ── Designer credit ──────────────────────────────────────────────────────
+    auto* designer_lbl = new QLabel(QStringLiteral("Designed By Anubhav Singh Rajput"));
+    designer_lbl->setAlignment(Qt::AlignCenter);
+    designer_lbl->setStyleSheet(
+        QString("color: %1; font-size: 11px; background: transparent;"
+                "font-family: 'Consolas','Courier New',monospace;"
+                "letter-spacing: 0.3px; margin-top: 4px;")
+            .arg(ui::colors::TEXT_DIM()));
+    vl->addWidget(designer_lbl);
+
     // ── Input limits ─────────────────────────────────────────────────────────
     // Client-side caps mirroring the register endpoint's constraints, so an
     // over-long value is stopped at the keyboard instead of on a round trip.

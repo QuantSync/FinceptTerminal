@@ -372,6 +372,16 @@ void LoginScreen::build_login_page() {
     rrl->addWidget(signup_btn_);
     vl->addWidget(reg_row);
 
+    // ── Designer credit ──────────────────────────────────────────────────────
+    auto* designer_lbl = new QLabel(QStringLiteral("Designed By Anubhav Singh Rajput"));
+    designer_lbl->setAlignment(Qt::AlignCenter);
+    designer_lbl->setStyleSheet(
+        QString("color: %1; font-size: 11px; background: transparent;"
+                "font-family: 'Consolas','Courier New',monospace;"
+                "letter-spacing: 0.3px; margin-top: 4px;")
+            .arg(ui::colors::TEXT_DIM()));
+    vl->addWidget(designer_lbl);
+
     connect(password_input_, &QLineEdit::returnPressed, this, &LoginScreen::on_login);
     connect(email_input_, &QLineEdit::returnPressed, this, [this]() { password_input_->setFocus(); });
 
